@@ -6,17 +6,19 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Zdjecia
 {
     public partial class Form1 : Form
     {
         string[] wczytanePliki;
-        int numer = 0;
+        private int numer=0;
         public Form1()
         {
             InitializeComponent();
             this.MouseWheel += new MouseEventHandler(Form1_MouseWheel);
+            //wczytanePliki[0] = Directory.GetCurrentDirectory() + "images.jpg";
          
         }
 
@@ -45,20 +47,20 @@ namespace Zdjecia
             //dialog.ShowDialog();
             //if (dialog.FileName != "")
             //   obrazek.LoadFromFile(dialog.FileName);
-     //       OpenFileDialog open = new OpenFileDialog();
-    //        open.InitialDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-    //        open.Filter = "JPEG Compressed Image (*.jpg|*.jpg" + "|GIF Image(*.gif|*.gif" + "|Bitmap Image(*.bmp|*.bmp";
-    //        open.Multiselect = true;
-    //        open.FilterIndex = 1;
+            OpenFileDialog open = new OpenFileDialog();
+           open.InitialDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            open.Filter = "JPEG Compressed Image (*.jpg|*.jpg" + "|GIF Image(*.gif|*.gif" + "|Bitmap Image(*.bmp|*.bmp";
+            open.Multiselect = true;
+            open.FilterIndex = 1;
 
             // jezeli pomyslnie wybrano pliki to skopiuj nazwy do tablicy wczytanePliki
-     //       if (open.ShowDialog() == DialogResult.OK)
-       //     {
-         //       wczytanePliki = new string[open.FileNames.Length];
-           //     open.FileNames.CopyTo(wczytanePliki, 0);
-                //obrazek.LoadFromFile(wczytanePliki[0]);
-                obrazek.LoadFromFile("C:\\Users\\Marcin\\Desktop\\images.jpg");
-            //}
+           if (open.ShowDialog() == DialogResult.OK)
+           {
+                wczytanePliki = new string[open.FileNames.Length];
+                open.FileNames.CopyTo(wczytanePliki, 0);
+                obrazek.LoadFromFile(wczytanePliki[numer]);
+               // obrazek.LoadFromFile("C:\\Users\\Marcin\\Desktop\\images.jpg");
+            }
 
         }
 
@@ -70,6 +72,11 @@ namespace Zdjecia
         private void zoomOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             obrazek.ZoomOut();
+        }
+
+        private void nastepnyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            obrazek.LoadFromFile(wczytanePliki[++numer]);
         }
     }
 }
