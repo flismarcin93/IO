@@ -1,0 +1,9 @@
+D:\Zdjecia\Zdjecia\bin\Debug\Zdjecia.exe
+D:\Zdjecia\Zdjecia\bin\Debug\Zdjecia.pdb
+D:\Zdjecia\Zdjecia\obj\x86\Debug\Zdjecia.Form1.resources
+D:\Zdjecia\Zdjecia\obj\x86\Debug\Zdjecia.MyPictureBox.resources
+D:\Zdjecia\Zdjecia\obj\x86\Debug\Zdjecia.Properties.Resources.resources
+D:\Zdjecia\Zdjecia\obj\x86\Debug\Zdjecia.csproj.GenerateResource.Cache
+D:\Zdjecia\Zdjecia\obj\x86\Debug\Zdjecia.exe
+D:\Zdjecia\Zdjecia\obj\x86\Debug\Zdjecia.pdb
+D:\Zdjecia\Zdjecia\obj\x86\Debug\Zdjecia.csprojResolveAssemblyReference.cache
