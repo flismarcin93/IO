@@ -77,11 +77,21 @@ namespace Zdjecia
         private void nastepnyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if(numer<2) obrazek.LoadFromFile(wczytanePliki[++numer]);
+            else 
+            {
+                numer=0;
+                obrazek.LoadFromFile(wczytanePliki[numer];
+            }
         }
 
         private void poprzedniToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(numer>0) obrazek.LoadFromFile(wczytanePliki[--numer]);
+            if (numer > 0) obrazek.LoadFromFile(wczytanePliki[--numer]);
+            else
+            {
+                numer = 2;
+                obrazek.LoadFromFile(wczytanePliki[numer]);
+            }
         }
     }
 }
