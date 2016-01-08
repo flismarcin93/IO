@@ -58,8 +58,6 @@ namespace Zdjecia
            //     open.FileNames.CopyTo(wczytanePliki, 0);
                 //obrazek.LoadFromFile(wczytanePliki[0]);
                 obrazek.LoadFromFile("C:\\Users\\Marcin\\Desktop\\images.jpg");
-
-
             //}
 
         }
