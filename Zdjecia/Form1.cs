@@ -76,11 +76,11 @@ namespace Zdjecia
 
         private void nastepnyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(numer<2) obrazek.LoadFromFile(wczytanePliki[++numer]);
+            if(numer<1) obrazek.LoadFromFile(wczytanePliki[++numer]);
             else 
             {
                 numer=0;
-                obrazek.LoadFromFile(wczytanePliki[numer];
+                obrazek.LoadFromFile(wczytanePliki[numer]);
             }
         }
 
@@ -89,7 +89,7 @@ namespace Zdjecia
             if (numer > 0) obrazek.LoadFromFile(wczytanePliki[--numer]);
             else
             {
-                numer = 2;
+                numer = 1;
                 obrazek.LoadFromFile(wczytanePliki[numer]);
             }
         }
