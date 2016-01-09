@@ -1,0 +1,2 @@
+D:\Zdjecia\Zdjecia\obj\x86\Debug\Zdjecia.exe
+D:\Zdjecia\Zdjecia\obj\x86\Debug\Zdjecia.pdb
