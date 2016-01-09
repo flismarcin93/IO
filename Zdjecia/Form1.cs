@@ -15,6 +15,7 @@ namespace Zdjecia
     {
         string[] wczytanePliki;
         private int numer=0;
+        Uzytkownik a;
         public Form1()
         {
             InitializeComponent();
@@ -23,8 +24,7 @@ namespace Zdjecia
             //wczytanePliki[0] = Directory.GetCurrentDirectory() + "images.jpg";
             Form2 form2 = new Form2();
             form2.Owner = this;
-            form2.ShowDialog();
-         
+            form2.ShowDialog();         
         }
 
         void Form1_MouseWheel(object sender, MouseEventArgs e)
@@ -104,6 +104,13 @@ namespace Zdjecia
             Form2 form2 = new Form2();
             form2.Owner = this;
             form2.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            MessageBox.Show("dziekujemy za skorzystanie","Żegnaj",MessageBoxButtons.OK);
+            Close();
         }
 
       

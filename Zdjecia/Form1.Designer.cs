@@ -38,6 +38,7 @@
             this.zoominToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zoomOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.obrazek = new Zdjecia.MyPictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             this.opcjeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(284, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(460, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -120,15 +121,26 @@
             this.obrazek.Dock = System.Windows.Forms.DockStyle.Fill;
             this.obrazek.Location = new System.Drawing.Point(0, 24);
             this.obrazek.Name = "obrazek";
-            this.obrazek.Size = new System.Drawing.Size(284, 237);
+            this.obrazek.Size = new System.Drawing.Size(460, 237);
             this.obrazek.TabIndex = 0;
             this.obrazek.Paint += new System.Windows.Forms.PaintEventHandler(this.obrazek_Paint);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(364, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(81, 18);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "zakoncz";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(460, 261);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.obrazek);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
@@ -152,6 +164,7 @@
         private System.Windows.Forms.ToolStripMenuItem nastepnyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem poprzedniToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logowanieToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }
 
