@@ -17,6 +17,7 @@ namespace Zdjecia
         public Form1()
         {
             InitializeComponent();
+            MessageBox.Show("wybierz plec","no", MessageBoxButtons.YesNoCancel); 
             this.MouseWheel += new MouseEventHandler(Form1_MouseWheel);
             //wczytanePliki[0] = Directory.GetCurrentDirectory() + "images.jpg";
          
