@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 
+
 namespace Zdjecia
 {
     public partial class Form1 : Form
@@ -17,9 +18,12 @@ namespace Zdjecia
         public Form1()
         {
             InitializeComponent();
-            MessageBox.Show("wybierz plec","no", MessageBoxButtons.YesNoCancel); 
-            this.MouseWheel += new MouseEventHandler(Form1_MouseWheel);
+            //MessageBox.Show("wybierz plec","no", MessageBoxButtons.YesNoCancel); 
+            //this.MouseWheel += new MouseEventHandler(Form1_MouseWheel);
             //wczytanePliki[0] = Directory.GetCurrentDirectory() + "images.jpg";
+            Form2 form2 = new Form2();
+            form2.Owner = this;
+            form2.ShowDialog();
          
         }
 
@@ -94,5 +98,14 @@ namespace Zdjecia
                 obrazek.LoadFromFile(wczytanePliki[numer]);
             }
         }
+
+        private void logowanieToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Owner = this;
+            form2.ShowDialog();
+        }
+
+      
     }
 }
