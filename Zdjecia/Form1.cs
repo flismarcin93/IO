@@ -15,16 +15,17 @@ namespace Zdjecia
     {
         string[] wczytanePliki;
         private int numer=0;
-        Uzytkownik a;
+        //Uzytkownik a;
+        //Form2 forma2;
         public Form1()
         {
             InitializeComponent();
             //MessageBox.Show("wybierz plec","no", MessageBoxButtons.YesNoCancel); 
             //this.MouseWheel += new MouseEventHandler(Form1_MouseWheel);
             //wczytanePliki[0] = Directory.GetCurrentDirectory() + "images.jpg";
-            Form2 form2 = new Form2();
-            form2.Owner = this;
-            form2.ShowDialog();         
+           // Form2 form2 = new Form2(this);
+            //form2.Owner = this;
+            //form2.ShowDialog();
         }
 
         void Form1_MouseWheel(object sender, MouseEventArgs e)
@@ -81,8 +82,8 @@ namespace Zdjecia
 
         private void nastepnyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(numer<1) obrazek.LoadFromFile(wczytanePliki[++numer]);
-            else 
+            if (numer<1) obrazek.LoadFromFile(wczytanePliki[++numer]);
+            else
             {
                 numer=0;
                 obrazek.LoadFromFile(wczytanePliki[numer]);
@@ -101,16 +102,21 @@ namespace Zdjecia
 
         private void logowanieToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
-            form2.Owner = this;
+            Form2 form2 = new Form2(this);
+            //form2.Owner = this;
             form2.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            MessageBox.Show("dziekujemy za skorzystanie","Żegnaj",MessageBoxButtons.OK);
+
+            MessageBox.Show("dziekujemy za skorzystanie", "Żegnaj", MessageBoxButtons.OK);
             Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
         }
 
       

@@ -12,9 +12,11 @@ namespace Zdjecia
     public partial class Form2 : Form
     {
         Uzytkownik a;
-        public Form2()
+        private Form1 formaa1;
+        public Form2(Form1 forma1)
         {
             InitializeComponent();
+            formaa1 = forma1;
         }
 
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
@@ -29,7 +31,6 @@ namespace Zdjecia
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
             string tmpplec="kobieta";
             if (radioButton2.Checked == true) tmpplec = "mezczyna";
             int zmienna = Convert.ToInt32(Math.Round(numericUpDown1.Value, 0));
@@ -39,6 +40,11 @@ namespace Zdjecia
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            formaa1.label1.Text = textBox1.Text;
         }
 
     }
