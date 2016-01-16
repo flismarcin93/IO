@@ -14,6 +14,7 @@ namespace Zdjecia
     public partial class Form1 : Form
     {
         string[] wczytanePliki;
+        string []items;
         private int numer=0;
         //Uzytkownik a;
         //Form2 forma2;
@@ -26,6 +27,10 @@ namespace Zdjecia
            // Form2 form2 = new Form2(this);
             //form2.Owner = this;
             //form2.ShowDialog();
+            String path = @"C:\Users\Marcin\Desktop\a.txt";
+            items = File.ReadAllText(path).Split(new String[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+
+
         }
 
         void Form1_MouseWheel(object sender, MouseEventArgs e)
@@ -66,8 +71,11 @@ namespace Zdjecia
                 open.FileNames.CopyTo(wczytanePliki, 0);
                 obrazek.LoadFromFile(wczytanePliki[numer]);
                // obrazek.LoadFromFile("C:\\Users\\Marcin\\Desktop\\images.jpg");
+               obrazek.LoadFromFile(items[0]);
             }
 
+            
+            
         }
 
         private void zoominToolStripMenuItem_Click(object sender, EventArgs e)
@@ -82,7 +90,7 @@ namespace Zdjecia
 
         private void nastepnyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (numer<1) obrazek.LoadFromFile(wczytanePliki[++numer]);
+            if (numer<1) obrazek.LoadFromFile(items[++numer]);
             else
             {
                 numer=0;
