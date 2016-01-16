@@ -78,7 +78,7 @@ namespace Zdjecia
             */
             
         }
-
+        /*
         private void zoominToolStripMenuItem_Click(object sender, EventArgs e)
         {
             obrazek.ZoomIn();
@@ -108,24 +108,35 @@ namespace Zdjecia
                 //obrazek.LoadFromFile(wczytanePliki[numer]);
             //}
         }
-
+        
         private void logowanieToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2(this);
             //form2.Owner = this;
             form2.ShowDialog();
         }
-
+        */
         private void button1_Click(object sender, EventArgs e)
         {
 
-            MessageBox.Show("dziekujemy za skorzystanie", "Żegnaj", MessageBoxButtons.OK);
+            //MessageBox.Show("dziekujemy za skorzystanie", "Żegnaj", MessageBoxButtons.OK);
             Close();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (numer > 0) obrazek.LoadFromFile(items[--numer]);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (numer < 1) obrazek.LoadFromFile(items[++numer]);
         }
 
       
