@@ -11,7 +11,7 @@ namespace Zdjecia
 {
     public partial class Form2 : Form
     {
-        Uzytkownik a;
+        //Uzytkownik a;
         private Form1 formaa1;
         public Form2(Form1 forma1)
         {
@@ -31,10 +31,11 @@ namespace Zdjecia
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string tmpplec="kobieta";
-            if (radioButton2.Checked == true) tmpplec = "mezczyna";
-            int zmienna = Convert.ToInt32(Math.Round(numericUpDown1.Value, 0));
-            a = new Uzytkownik(textBox1.Text, tmpplec, zmienna);
+            //string tmpplec="kobieta";
+            //if (radioButton2.Checked == true) tmpplec = "mezczyna";
+            //int zmienna = Convert.ToInt32(Math.Round(numericUpDown1.Value, 0));
+            //a = new Uzytkownik(textBox1.Text, tmpplec, zmienna);
+              
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

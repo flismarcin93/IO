@@ -24,12 +24,12 @@ namespace Zdjecia
             //MessageBox.Show("wybierz plec","no", MessageBoxButtons.YesNoCancel); 
             //this.MouseWheel += new MouseEventHandler(Form1_MouseWheel);
             //wczytanePliki[0] = Directory.GetCurrentDirectory() + "images.jpg";
-           // Form2 form2 = new Form2(this);
-            //form2.Owner = this;
-            //form2.ShowDialog();
+            Form2 form2 = new Form2(this);
+            form2.Owner = this;
+            form2.ShowDialog();
             String path = @"C:\Users\Marcin\Desktop\a.txt";
             items = File.ReadAllText(path).Split(new String[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-
+            obrazek.LoadFromFile(items[0]);
 
         }
 
@@ -71,7 +71,7 @@ namespace Zdjecia
                 open.FileNames.CopyTo(wczytanePliki, 0);
                 obrazek.LoadFromFile(wczytanePliki[numer]);
                // obrazek.LoadFromFile("C:\\Users\\Marcin\\Desktop\\images.jpg");
-               obrazek.LoadFromFile(items[0]);
+               //obrazek.LoadFromFile(items[0]);
             }
 
             
@@ -91,21 +91,21 @@ namespace Zdjecia
         private void nastepnyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (numer<1) obrazek.LoadFromFile(items[++numer]);
-            else
-            {
-                numer=0;
-                obrazek.LoadFromFile(wczytanePliki[numer]);
-            }
+            //else
+            //{
+             //   numer=0;
+              //  obrazek.LoadFromFile(wczytanePliki[numer]);
+            //}
         }
 
         private void poprzedniToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (numer > 0) obrazek.LoadFromFile(wczytanePliki[--numer]);
-            else
-            {
-                numer = 1;
-                obrazek.LoadFromFile(wczytanePliki[numer]);
-            }
+            if (numer > 0) obrazek.LoadFromFile(items[--numer]);
+            //else
+            //{
+              //  numer = 1;
+                //obrazek.LoadFromFile(wczytanePliki[numer]);
+            //}
         }
 
         private void logowanieToolStripMenuItem_Click(object sender, EventArgs e)
