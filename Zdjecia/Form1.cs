@@ -54,6 +54,7 @@ namespace Zdjecia
 
         private void otworzToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            /*
             //OpenFileDialog dialog = new OpenFileDialog();
             //dialog.ShowDialog();
             //if (dialog.FileName != "")
@@ -74,7 +75,7 @@ namespace Zdjecia
                //obrazek.LoadFromFile(items[0]);
             }
 
-            
+            */
             
         }
 
