@@ -168,8 +168,8 @@ namespace Zdjecia
                 button4.Text = "kon";
                 button5.Text = "krowa";
                 button6.Text = "kura";
-                button7.Text = "pies";
-                label2.Text = punkty.ToString();
+                button7.Text = "słoń";
+                //label2.Text = punkty.ToString();
                 MessageBox.Show("Brawo przeszedłes do nastepnego etapu. Wybieraj poprawne nazwy zwierząt", "Gratulacje");
                 numer =0;
                 obrazek.LoadFromFile(items[numer]);
@@ -205,8 +205,6 @@ namespace Zdjecia
             }
             else
                 MessageBox.Show("NIestety wybrałeś zła nazwe. wybierz poprawnie", "Źle");
-            //MessageBox.Show("Zła odpowiedź", "Uwaga", MessageBoxButtons.OK); 
-            //MessageBox.Show("zła odpowiedź. Zaznacz prawidlowa");
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -243,8 +241,9 @@ namespace Zdjecia
                 punkty++;
                 label2.Text = punkty.ToString();
                 //numer++;
-                //obrazek.LoadFromFile(items[numer]);
-                MessageBox.Show("Gratulacje przeszedłeś kolejny etap punkty", "Gratulacje");
+                obrazek.LoadFromFile(items[numer]);
+                string pom="Gratulacje przeszedłeś kolejny etap punkty.\r\n Twoje punkty: "+punkty;
+                MessageBox.Show(pom, "Gratulacje");
                 button4.Visible = false;
                 button5.Visible = false;
                 button6.Visible = false;
@@ -269,7 +268,12 @@ namespace Zdjecia
             {
                 punkty++;
                 label2.Text = punkty.ToString();
-                MessageBox.Show("Gratulacje przeszedłeś całą gre", "Gratulacje");
+                string pom;
+                pom = "Gratulacje przeszedłeś całą gre\r\n Twoje punkty: " + punkty;
+                pom=pom+"\r\n Zakończ gre";
+                //MessageBox.Show(pom, "Gratulacje");
+                MessageBox.Show(pom, "Gratulacje"); 
+                    Close();
             }
             else
             {
