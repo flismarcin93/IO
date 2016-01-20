@@ -24,10 +24,10 @@ namespace Zdjecia
             // pic
             // 
             this.pic.BackColor = System.Drawing.Color.Black;
-            this.pic.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pic.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pic.Location = new System.Drawing.Point(0, 0);
             this.pic.Name = "pic";
-            this.pic.Size = new System.Drawing.Size(100, 50);
+            this.pic.Size = new System.Drawing.Size(100, 500);
             this.pic.TabIndex = 0;
             this.pic.TabStop = false;
             // 
