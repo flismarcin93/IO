@@ -16,8 +16,9 @@ namespace Zdjecia
         string[] wczytanePliki;
         string[] przyciski=new string []{"koń","krowa","kura","pies","słoń"};
         string []items;
+        string path;
         private int numer=0;
-        int i,punkty=0;
+        private int i=0,punkty=0,tmp=0;
         //Uzytkownik a;
         //Form2 forma2;
         public Form1()
@@ -29,14 +30,17 @@ namespace Zdjecia
             Form2 form2 = new Form2(this);
             form2.Owner = this;
             form2.ShowDialog();
-            String path = @"C:\Users\Marcin\Desktop\a.txt";
+            path = @"C:\Users\Marcin\Desktop\a.txt";
             items = File.ReadAllText(path).Split(new String[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
             obrazek.LoadFromFile(items[0]);
             button4.Visible = false;
             button5.Visible = false;
             button6.Visible = false;
             button7.Visible = false;
-            label2.Visible = false;
+            button8.Visible = false;
+            textBox1.Visible = false;
+            //label2.Visible = false;
+            label3.Visible = false;
             
 
         }
@@ -150,6 +154,9 @@ namespace Zdjecia
             }
             if (numer == 5)
             {
+                path = @"C:\Users\Marcin\Desktop\b.txt";
+                items = File.ReadAllText(path).Split(new String[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+                //obrazek.LoadFromFile(items[0]);
                 button3.Visible = false;
                 button2.Visible = false;
                 button4.Visible = true;
@@ -157,26 +164,119 @@ namespace Zdjecia
                 button6.Visible = true;
                 button7.Visible = true;
                 label2.Visible = true;
-                button4.Text = przyciski[i];
-                button5.Text = przyciski[i + 1];
-                button6.Text = przyciski[i + 2];
-                button7.Text = przyciski[i + 3];
+                label3.Visible = true;
+                button4.Text = "kon";
+                button5.Text = "krowa";
+                button6.Text = "kura";
+                button7.Text = "pies";
                 label2.Text = punkty.ToString();
-                numer = 0;
-                if (i == 2) button4_Click(sender, e);
+                MessageBox.Show("Brawo przeszedłes do nastepnego etapu. Wybieraj poprawne nazwy zwierząt", "Gratulacje");
+                numer =0;
+                obrazek.LoadFromFile(items[numer]);
+                //tmp++;
+                //tmp = 2;
+                //if (i == 1){ tmp=1; }
+                    
+                //}
+                //else{
+                  //  tmp=0;
+                //}
+                
+                //button4_Click(sender, e);
+                  //  button5_Click(sender,e);
+                    //button6_Click(sender,e);
+                    //button7_Click(sender,e);
                 //obrazek.LoadFromFile(items[numer]);
                 // if(radioButton1.Checked=true) {
                 //  punkty ++;
+                //i++;
             }
 
         }
-
+        
         private void button4_Click(object sender, EventArgs e)
         {
+            if(numer==0){
+            punkty++;
+            label2.Text = punkty.ToString();
+            numer++;
+            //i++;
+            obrazek.LoadFromFile(items[numer]);
+            }
+            else
+                MessageBox.Show("NIestety wybrałeś zła nazwe. wybierz poprawnie", "Źle");
+            //MessageBox.Show("Zła odpowiedź", "Uwaga", MessageBoxButtons.OK); 
+            //MessageBox.Show("zła odpowiedź. Zaznacz prawidlowa");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if(numer==1){
             punkty++;
             label2.Text = punkty.ToString();
             numer++;
             obrazek.LoadFromFile(items[numer]);
+            }
+            else
+                MessageBox.Show("NIestety wybrałeś zła nazwe. wybierz poprawnie", "Źle");
+        
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (numer == 2)
+            {
+                punkty++;
+                label2.Text = punkty.ToString();
+                numer++;
+                obrazek.LoadFromFile(items[numer]);
+            }
+            else
+                MessageBox.Show("NIestety wybrałeś zła nazwe. wybierz poprawnie", "Źle");
+        
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (numer == 3)
+            {
+                punkty++;
+                label2.Text = punkty.ToString();
+                //numer++;
+                //obrazek.LoadFromFile(items[numer]);
+                MessageBox.Show("Gratulacje przeszedłeś kolejny etap punkty", "Gratulacje");
+                button4.Visible = false;
+                button5.Visible = false;
+                button6.Visible = false;
+                button7.Visible = false;
+                button8.Visible = true;
+                textBox1.Visible = true;
+            }
+        
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if(numer==3 && string.Compare(textBox1.Text, "słoń", true)==0)
+            {
+                punkty++;
+                label2.Text = punkty.ToString(); 
+                numer++;
+                obrazek.LoadFromFile(items[numer]);
+                textBox1.Text = "";
+            }
+            else if (numer == 4 && string.Compare(textBox1.Text, "pies", true) == 0)
+            {
+                punkty++;
+                label2.Text = punkty.ToString();
+                MessageBox.Show("Gratulacje przeszedłeś całą gre", "Gratulacje");
+            }
+            else
+            {
+                MessageBox.Show("NIestety podałeś zła nazwe. wprowadź poprawną", "Źle");
+                textBox1.Text = "";
+            }
+
         }
 
       
