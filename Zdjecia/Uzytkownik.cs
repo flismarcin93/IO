@@ -16,9 +16,9 @@ namespace Zdjecia
             this.plec = plec;
             this.wiek = wiek;
         }
-        public string dane()
-        {
-            return this.Imie;
-        }
+        //public string dane()
+        //{
+          //  return this.Imie;
+        //}
     }
 }
