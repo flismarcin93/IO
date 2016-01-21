@@ -30,7 +30,7 @@ namespace Zdjecia
             Form2 form2 = new Form2(this);
             form2.Owner = this;
             form2.ShowDialog();
-            path = @"C:\Users\Marcin\Desktop\a.txt";
+            path = @"D:\IO\a.txt";
             items = File.ReadAllText(path).Split(new String[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
             obrazek.LoadFromFile(items[0]);
             button4.Visible = false;
