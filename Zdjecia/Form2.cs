@@ -31,10 +31,10 @@ namespace Zdjecia
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string tmpplec="kobieta";
-            if (radioButton2.Checked == true) tmpplec = "mezczyna";
-            int zmienna = Convert.ToInt32(Math.Round(numericUpDown1.Value, 0));
-            a = new Uzytkownik(textBox1.Text, tmpplec, zmienna);
+            //string tmpplec="kobieta";
+            //if (radioButton2.Checked == true) tmpplec = "mezczyna";
+            //int zmienna = Convert.ToInt32(Math.Round(numericUpDown1.Value, 0));
+            //a = new Uzytkownik(textBox1.Text, tmpplec, zmienna);
               
         }
 
