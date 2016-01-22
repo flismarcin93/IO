@@ -34,10 +34,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.obrazek = new Zdjecia.MyPictureBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
@@ -87,9 +87,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(447, 5);
+            this.button4.Location = new System.Drawing.Point(447, 0);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(69, 19);
+            this.button4.Size = new System.Drawing.Size(69, 24);
             this.button4.TabIndex = 6;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
@@ -104,23 +104,6 @@
             this.button6.Text = "button6";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(315, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 20);
-            this.textBox1.TabIndex = 8;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(496, 3);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(54, 19);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "sprawdź";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // menuStrip1
             // 
@@ -146,6 +129,23 @@
             this.obrazek.Size = new System.Drawing.Size(606, 296);
             this.obrazek.TabIndex = 0;
             this.obrazek.Paint += new System.Windows.Forms.PaintEventHandler(this.obrazek_Paint);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(496, -12);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(54, 34);
+            this.button8.TabIndex = 9;
+            this.button8.Text = "sprawdź";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(315, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(153, 20);
+            this.textBox1.TabIndex = 8;
             // 
             // label3
             // 
@@ -188,6 +188,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(606, 320);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button4);

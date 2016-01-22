@@ -9,13 +9,20 @@ using System.Windows.Forms;
 
 namespace Zdjecia
 {
+    /**\file
+      * /
+      /**\class Form2
+      *\brief Form2 sluzy do wysiwetlenia ekranu logowania i utworzeniu profilu gracza
+      */ 
     public partial class Form2 : Form
     {
         //Uzytkownik a;
         private Form1 formaa1;
+        //! \brief konstruktor klasy Form2
         public Form2(Form1 forma1)
         {
             InitializeComponent();
+           // this.WindowState = FormWindowState.Maximized;
             formaa1 = forma1;
         }
 

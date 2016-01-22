@@ -11,19 +11,35 @@ using System.IO;
 
 namespace Zdjecia
 {
+    /**\file
+     * /
+     /**\class Form1
+     *\brief Form1 sluzy do wysiwetlania glownego ekranu gry
+     */ 
     public partial class Form1 : Form
     {
+        
         string[] wczytanePliki;
+        //! \brief tablica sluzaca do przechowywania napisow na przyciski
         string[] przyciski=new string []{"koń","krowa","kura","pies","słoń"};
+        //! \brief tablica sluzaca do przechowywania sciezek do plikow
         string []items;
+        //! \brief zmienna przechowujaca sciezke do pliku tekstowego ze sciezkami do obrazkow
         string path;
+        //! \brief zminna oprzechowujaca aktualny indeks w tablicy wyswietlanych obrazkow
         private int numer=0;
-        private int i=0,punkty=0,tmp=0;
+
+        private int i=0;
+        //! \brief tablica zmienna przechowujaca aktualna ilosc punktow
+        private int punkty=0;
+        private int tmp=0;
         //Uzytkownik a;
         //Form2 forma2;
+        //! \brief konstruktor klasy Form 1
         public Form1()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
             //MessageBox.Show("wybierz plec","no", MessageBoxButtons.YesNoCancel); 
             //this.MouseWheel += new MouseEventHandler(Form1_MouseWheel);
             //wczytanePliki[0] = Directory.GetCurrentDirectory() + "images.jpg";
@@ -128,24 +144,25 @@ namespace Zdjecia
             form2.ShowDialog();
         }
         */
+        //! \brief funkcja odpowiadajaca za zdarzenie po nacisnieciu przycisku zakoncz
         private void button1_Click(object sender, EventArgs e)
         {
 
             //MessageBox.Show("dziekujemy za skorzystanie", "Żegnaj", MessageBoxButtons.OK);
             Close();
         }
-
+      
         private void label1_Click(object sender, EventArgs e)
         {
             
         }
-
+        //! \brief funkcja odpowiadajaca za zdarzenie po nacisnieciu przycisku poprzedni
         private void button3_Click(object sender, EventArgs e)
         {
             if (numer > 0) obrazek.LoadFromFile(items[--numer]);
 
         }
-
+        //! \brief funkcja odpowiadajaca za zdarzenie po nacisnieciu przycisku nastepny
         private void button2_Click(object sender, EventArgs e)
         {
             numer++;
@@ -193,7 +210,7 @@ namespace Zdjecia
             }
 
         }
-        
+        //! \brief funkcja odpowiadajaca za zdarzenie po nacisnieciu przycisku z odpowiedzia dla obrazka o indeksie 0 w tablicy sciezek
         private void button4_Click(object sender, EventArgs e)
         {
             if(numer==0){
@@ -206,7 +223,7 @@ namespace Zdjecia
             else
                 MessageBox.Show("NIestety wybrałeś zła nazwe. wybierz poprawnie", "Źle");
         }
-
+        //! \brief funkcja odpowiadajaca za zdarzenie po nacisnieciu przycisku z odpowiedzia dla obrazka o indeksie 1 w tablicy sciezek
         private void button5_Click(object sender, EventArgs e)
         {
             if(numer==1){
@@ -219,7 +236,7 @@ namespace Zdjecia
                 MessageBox.Show("NIestety wybrałeś zła nazwe. wybierz poprawnie", "Źle");
         
         }
-
+        //! \brief funkcja odpowiadajaca za zdarzenie po nacisnieciu przycisku z odpowiedzia dla obrazka o indeksie 2 w tablicy sciezek
         private void button6_Click(object sender, EventArgs e)
         {
             if (numer == 2)
@@ -233,7 +250,7 @@ namespace Zdjecia
                 MessageBox.Show("NIestety wybrałeś zła nazwe. wybierz poprawnie", "Źle");
         
         }
-
+        //! \brief funkcja odpowiadajaca za zdarzenie po nacisnieciu przycisku z odpowiedzia dla obrazka o indeksie 3 w tablicy sciezek
         private void button7_Click(object sender, EventArgs e)
         {
             if (numer == 3)
@@ -253,7 +270,7 @@ namespace Zdjecia
             }
         
         }
-
+        //! \brief funkcja odpowiadajaca za zdarzenie po nacisnieciu przycisku dla sprawdzenia poprawnosci odpowiedzi dla obrazka
         private void button8_Click(object sender, EventArgs e)
         {
             if(numer==3 && string.Compare(textBox1.Text, "słoń", true)==0)

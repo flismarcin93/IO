@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Zdjecia</name>
+    </assembly>
+    <members>
+        <member name="T:Zdjecia.Form2">
+            \file
+                  * /
+                  /**\class Form2
+                  *\brief Form2 sluzy do wysiwetlenia ekranu logowania i utworzeniu profilu gracza
+        </member>
+        <member name="F:Zdjecia.Form2.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Zdjecia.Form2.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Zdjecia.Form2.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Zdjecia.Uzytkownik">
+            \file
+             * /
+             /**\class Uzytkownik
+             *\brief Uzytkownik sluzy do tworzenia profilu uzytkownika
+        </member>
+        <member name="T:Zdjecia.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Zdjecia.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Zdjecia.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Zdjecia.Form1">
+            \file
+                 * /
+                 /**\class Form1
+                 *\brief Form1 sluzy do wysiwetlania glownego ekranu gry
+        </member>
+        <member name="F:Zdjecia.Form1.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Zdjecia.Form1.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Zdjecia.Form1.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Zdjecia.Program">
+            \file
+                 * /
+                 /**\class Program
+                 *\brief Program sluzy do uruchomienia gry i stworzenia obiektu klasy Form1
+        </member>
+        <member name="T:Zdjecia.MyPictureBox">
+            \file
+                 * /
+                 /**\class MyPictureBox
+                 *\brief MyPictureBox sluzy do wyswietlania obrazkow
+        </member>
+    </members>
+</doc>

@@ -6,15 +6,23 @@ using System.Windows.Forms;
 
 namespace Zdjecia
 {
+    /**\file
+     * /
+     /**\class MyPictureBox
+     *\brief MyPictureBox sluzy do wyswietlania obrazkow
+     */
     class MyPictureBox:Panel
     {
+        //! \brief kontrolak odpowiadajaca za wyswietlanie obrazkow
         private PictureBox pic;
         const int MAXZOOM = 5;
+        //! \brief konstruktor odpowiadajacy za tworzenie obiektu MyPictureBox oraz kontrolki
         public MyPictureBox()
         {
             InitializeComponent();
             this.Controls.Add(pic);
         }
+        //! \brief funkcja ustawiajaca parametry kontrolki takie jak m.in. kolor tla
         private void InitializeComponent()
         {
             this.pic = new System.Windows.Forms.PictureBox();
@@ -39,6 +47,7 @@ namespace Zdjecia
             this.ResumeLayout(false);
 
         }
+        //! \brief funkcja odpowiadajaca za wczytywanie z pliku
         public void LoadFromFile(string txt)
         {
             try
@@ -55,6 +64,7 @@ namespace Zdjecia
             pic.SizeMode = PictureBoxSizeMode.CenterImage;
             dopasuj();
         }
+         //! \brief funkcja odpowiadajaca za dopasowywanie kontrolki do obrazka
         private void dopasuj()
         {
             if (pic.Width < this.Width &&
@@ -69,6 +79,7 @@ namespace Zdjecia
                 pic.Location = new System.Drawing.Point(0, 0);
             }
         }
+         
         public void ZoomIn()
         {
             if (pic.Image == null) return;
@@ -82,7 +93,7 @@ namespace Zdjecia
             pic.SizeMode = PictureBoxSizeMode.StretchImage;
             dopasuj();
         }
-
+        
         public void ZoomOut()
         {
         if (pic.Image == null) return;
@@ -95,9 +106,11 @@ namespace Zdjecia
         pic.SizeMode = PictureBoxSizeMode.StretchImage;
            dopasuj();
         }
+        
         private void MyPictureBox_Resize(object sender, EventArgs e)
         {
             dopasuj();
         }
+         
     }
 }
